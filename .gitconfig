@@ -1,0 +1,25 @@
+[user]
+	name = Leonardo Campello
+	email = leonardocampello.dev@gmail.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[core]
+	editor = code --wait
+[push]
+	followTags = true
+[alias]
+	## para dar add e commitar rapidamente 
+	c = !git add --all && git commit -m
+	
+	## para ver o status do git de forma simplificada
+	s = !git status -s
+	
+	## para ver os logs de forma personalizada
+	lg = !git log --pretty=format:'😎 %C(blue)%h%C(white)%d %s - by: %C(green)%cn, %C(cyan)%cr'
+	
+	## para adicionar mudanças no commit anterior
+	amend = !git add --all && git commit --amend --no-edit
+	
+	## para monitorar estatísticas de commits baseado no seu tipo, ex: feat
+	count = !git shortlog -s --grep
